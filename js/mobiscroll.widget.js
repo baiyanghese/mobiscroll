@@ -201,6 +201,13 @@
                 modalHeight = d.outerHeight(true);
                 scrollLock = modalHeight <= nh && modalWidth <= nw;
 
+                if (modalWidth <= 360) {
+                    d.addClass('mbsc-s');
+                } else if (modalWidth <= 768) {
+                    d.addClass('mbsc-m');
+                } else {
+                    d.addClass('mbsc-l');
+                }
                 that.scrollLock = scrollLock;
 
                 if (s.display == 'modal') {
